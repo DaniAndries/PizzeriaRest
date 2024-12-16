@@ -11,6 +11,7 @@ const products = [
       "price": 8.50,
       "type": "pizza",
       "size": "LARGE",
+      "meat": null,
       "ingredients": [
           {
               "id": 1,
@@ -35,6 +36,7 @@ const products = [
       "price": 9.00,
       "type": "pizza",
       "size": "MEDIUM",
+      "meat": null,
       "ingredients": [
           {
               "id": 1,
@@ -54,6 +56,7 @@ const products = [
       "price": 7.00,
       "type": "pasta",
       "size": null,
+      "meat": null,
       "ingredients": [
           {
               "id": 5,
@@ -78,6 +81,7 @@ const products = [
       "price": 2.50,
       "type": "drinks",
       "size": "MEDIUM",
+      "meat": null,
       "ingredients": [] // No tiene ingredients
   },
   {
@@ -86,6 +90,7 @@ const products = [
       "price": 1.50,
       "type": "drinks",
       "size": "SMALL",
+      "meat": null,
       "ingredients": [] // No tiene ingredients
   },
   // Nueva pizza
@@ -95,6 +100,7 @@ const products = [
       "price": 10.00,
       "type": "pizza",
       "size": "LARGE",
+      "meat": null,
       "ingredients": [
           {
               "id": 1,
@@ -125,6 +131,7 @@ const products = [
       "price": 2.00,
       "type": "drinks",
       "size": "MEDIUM",
+      "meat": null,
       "ingredients": [] // No tiene ingredients
   },
   // Nuevo plato de pasta
@@ -132,8 +139,8 @@ const products = [
       "id": 8,
       "name": "Pasta Alfredo",
       "price": 8.00,
-      "type": "pasta",
       "size": null,
+      "meat": null,
       "ingredients": [
           {
               "id": 9,
