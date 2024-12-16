@@ -151,6 +151,64 @@ const products = [
               "alergens": []
           }
       ]
+  },
+// Nuevos platos de kebab
+  {
+    "id": 13,
+    "name": "Classic Kebab",
+    "price": 7.99,
+    "size": null,
+    "ingredients": [
+      { "id": 1, "name": "Tomato", "alergens": [] },
+      { "id": 2, "name": "Lettuce", "alergens": [] },
+      { "id": 3, "name": "Onions", "alergens": [] },
+      { "id": 4, "name": "Cucumber", "alergens": [] }
+    ],
+    "type": "KEBAB",
+    "meat": null
+  },
+  {
+    "id": 14,
+    "name": "BBQ Kebab",
+    "price": 8.49,
+    "size": null,
+    "ingredients": [
+      { "id": 1, "name": "Tomato", "alergens": [] },
+      { "id": 2, "name": "Lettuce", "alergens": [] },
+      { "id": 3, "name": "Onions", "alergens": [] },
+      { "id": 5, "name": "Peppers", "alergens": [] },
+      { "id": 6, "name": "BBQ Sauce", "alergens": [] }
+    ],
+    "type": "KEBAB",
+    "meat": null
+  },
+  {
+    "id": 15,
+    "name": "Spicy Kebab",
+    "price": 9.99,
+    "size": null,
+    "ingredients": [
+      { "id": 1, "name": "Tomato", "alergens": [] },
+      { "id": 2, "name": "Lettuce", "alergens": [] },
+      { "id": 3, "name": "Onions", "alergens": [] },
+      { "id": 4, "name": "Cucumber", "alergens": [] },
+      { "id": 16, "name": "Spicy Sauce", "alergens": ["None"] }
+    ],
+    "type": "KEBAB",
+    "meat": null
+  },
+  {
+    "id": 16,
+    "name": "Falafel Kebab",
+    "price": 8.99,
+    "size": null,
+    "ingredients": [
+      { "id": 1, "name": "Tomato", "alergens": [] },
+      { "id": 2, "name": "Lettuce", "alergens": [] },
+      { "id": 5, "name": "Peppers", "alergens": [] }
+    ],
+    "type": "KEBAB",
+    "meat": null
   }
 ];
 
@@ -216,7 +274,7 @@ app.post('/clients/login', (req, res) => {
   if (client && client.password === password) {
     res.status(200).send(client);
   } else {
-    res.status(401).send({ message: 'mail or pasword wrong' });
+    res.status(401).send({ message: 'wrong mail or pasword' });
   }
 });
 
