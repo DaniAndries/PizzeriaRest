@@ -15,7 +15,7 @@ const products = [
       { "id": 2, "name": "Tomato", "alergens": [] },
       { "id": 3, "name": "Basil", "alergens": [] }
     ],
-    "type": "pizza",
+    "type": "PIZZA",
     "meat": null
   },
   {
@@ -27,7 +27,7 @@ const products = [
       { "id": 1, "name": "Mozzarella", "alergens": ["Dairy"] },
       { "id": 4, "name": "Pepperoni", "alergens": [] }
     ],
-    "type": "pizza",
+    "type": "PIZZA",
     "meat": null
   },
   {
@@ -40,7 +40,7 @@ const products = [
       { "id": 6, "name": "Carne Molida", "alergens": [] },
       { "id": 7, "name": "Salsa Boloñesa", "alergens": ["Dairy"] }
     ],
-    "type": "pasta",
+    "type": "PASTA",
     "meat": null
   },
   {
@@ -49,7 +49,7 @@ const products = [
     "price": 2.50,
     "size": null,
     "ingredients": [],
-    "type": "drinks",
+    "type": "DRINK",
     "meat": null
   },
   {
@@ -58,7 +58,7 @@ const products = [
     "price": 1.50,
     "size": null,
     "ingredients": [],
-    "type": "drinks",
+    "type": "DRINK",
     "meat": null
   },
   {
@@ -72,7 +72,7 @@ const products = [
       { "id": 3, "name": "Parmesano", "alergens": ["Dairy"] },
       { "id": 4, "name": "Ricotta", "alergens": ["Dairy"] }
     ],
-    "type": "pizza",
+    "type": "PIZZA",
     "meat": null
   },
   {
@@ -81,7 +81,7 @@ const products = [
     "price": 2.00,
     "size": null,
     "ingredients": [],
-    "type": "drinks",
+    "type": "DRINK",
     "meat": null
   },
   {
@@ -94,7 +94,7 @@ const products = [
       { "id": 10, "name": "Salsa Alfredo", "alergens": ["Dairy"] },
       { "id": 11, "name": "Parsley", "alergens": [] }
     ],
-    "type": "pasta",
+    "type": "PASTA",
     "meat": null
   },
   {
