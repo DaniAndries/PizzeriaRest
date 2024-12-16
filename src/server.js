@@ -10,7 +10,7 @@ const products = [
       "name": "Margarita",
       "price": 8.50,
       "type": "pizza",
-      "size": "BIG",
+      "size": "LARGE",
       "ingredients": [
           {
               "id": 1,
@@ -34,7 +34,7 @@ const products = [
       "name": "Pepperoni",
       "price": 9.00,
       "type": "pizza",
-      "size": "MEDIANA",
+      "size": "MEDIUM",
       "ingredients": [
           {
               "id": 1,
@@ -77,7 +77,7 @@ const products = [
       "name": "Coca-Cola",
       "price": 2.50,
       "type": "drinks",
-      "size": "MEDIANA",
+      "size": "MEDIUM",
       "ingredients": [] // No tiene ingredients
   },
   {
@@ -85,7 +85,7 @@ const products = [
       "name": "Mineral Water",
       "price": 1.50,
       "type": "drinks",
-      "size": "PEQUENA",
+      "size": "SMALL",
       "ingredients": [] // No tiene ingredients
   },
   // Nueva pizza
@@ -94,7 +94,7 @@ const products = [
       "name": "Four Cheeses",
       "price": 10.00,
       "type": "pizza",
-      "size": "BIG",
+      "size": "LARGE",
       "ingredients": [
           {
               "id": 1,
@@ -124,7 +124,7 @@ const products = [
       "name": "Fanta Orange",
       "price": 2.00,
       "type": "drinks",
-      "size": "MEDIANA",
+      "size": "MEDIUM",
       "ingredients": [] // No tiene ingredients
   },
   // Nuevo plato de pasta
@@ -165,7 +165,7 @@ let clients = [
         id: 1,
         dni: "12345678A",
         name: "Juan Pérez",
-        direction: "Calle Falsa 123",
+        address: "Calle Falsa 123",
         phone: "555123456",
         mail: "juan@gmail.com",
         password: "1234",
@@ -179,7 +179,7 @@ app.get('/clients', (req, res) => {
 // Ruta para agregar un nuevo cliente
 app.post('/clients/register', (req, res) => {
   console.log("Data receive:" + req.body); 
-  const { dni, name, direction, phone, mail, password } = req.body;
+  const { dni, name, address, phone, mail, password } = req.body;
   // Verificar si ya existe un cliente con el mismo mail
   const clientExistent = clients.find(c => c.mail === mail);
   if (clientExistent) {
@@ -191,7 +191,7 @@ app.post('/clients/register', (req, res) => {
     id: clients.length + 1, // Generar un nuevo ID
     dni,
     name,
-    direction,
+    address,
     phone,
     mail,
     password,
