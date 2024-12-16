@@ -5,219 +5,156 @@ app.use(express.json());
 
 // Products list
 const products = [
-  {
+    {
       "id": 1,
       "name": "Margarita",
       "price": 8.50,
-      "type": "pizza",
       "size": "LARGE",
-      "meat": null,
       "ingredients": [
-          {
-              "id": 1,
-              "name": "Mozzarella",
-              "alergens": ["Dairy"]
-          },
-          {
-              "id": 2,
-              "name": "Tomato",
-              "alergens": []
-          },
-          {
-              "id": 3,
-              "name": "Basil",
-              "alergens": []
-          }
-      ]
-  },
-  {
+        { "id": 1, "name": "Mozzarella", "alergens": ["Dairy"] },
+        { "id": 2, "name": "Tomato", "alergens": [] },
+        { "id": 3, "name": "Basil", "alergens": [] }
+      ],
+      "type": "pizza",
+      "meat": null
+    },
+    {
       "id": 2,
       "name": "Pepperoni",
       "price": 9.00,
-      "type": "pizza",
       "size": "MEDIUM",
-      "meat": null,
       "ingredients": [
-          {
-              "id": 1,
-              "name": "Mozzarella",
-              "alergens": ["Dairy"]
-          },
-          {
-              "id": 4,
-              "name": "Pepperoni",
-              "alergens": []
-          }
-      ]
-  },
-  {
+        { "id": 1, "name": "Mozzarella", "alergens": ["Dairy"] },
+        { "id": 4, "name": "Pepperoni", "alergens": [] }
+      ],
+      "type": "pizza",
+      "meat": null
+    },
+    {
       "id": 3,
       "name": "Spaghetti",
       "price": 7.00,
-      "type": "pasta",
       "size": null,
-      "meat": null,
       "ingredients": [
-          {
-              "id": 5,
-              "name": "Spaghetti",
-              "alergens": ["Gluten"]
-          },
-          {
-              "id": 6,
-              "name": "Carne Molida",
-              "alergens": []
-          },
-          {
-              "id": 7,
-              "name": "Salsa Boloñesa",
-              "alergens": ["Dairy"]
-          }
-      ]
-  },
-  {
+        { "id": 5, "name": "Spaghetti", "alergens": ["Gluten"] },
+        { "id": 6, "name": "Carne Molida", "alergens": [] },
+        { "id": 7, "name": "Salsa Boloñesa", "alergens": ["Dairy"] }
+      ],
+      "type": "pasta",
+      "meat": null
+    },
+    {
       "id": 4,
       "name": "Coca-Cola",
       "price": 2.50,
-      "type": "drinks",
       "size": "MEDIUM",
-      "meat": null,
-      "ingredients": [] // No tiene ingredients
-  },
-  {
+      "ingredients": [],
+      "type": "drinks",
+      "meat": null
+    },
+    {
       "id": 5,
       "name": "Mineral Water",
       "price": 1.50,
-      "type": "drinks",
       "size": "SMALL",
-      "meat": null,
-      "ingredients": [] // No tiene ingredients
-  },
-  // Nueva pizza
-  {
+      "ingredients": [],
+      "type": "drinks",
+      "meat": null
+    },
+    {
       "id": 6,
       "name": "Four Cheeses",
       "price": 10.00,
-      "type": "pizza",
       "size": "LARGE",
-      "meat": null,
       "ingredients": [
-          {
-              "id": 1,
-              "name": "Mozzarella",
-              "alergens": ["Dairy"]
-          },
-          {
-              "id": 2,
-              "name": "Gorgonzola",
-              "alergens": ["Dairy"]
-          },
-          {
-              "id": 3,
-              "name": "Parmesano",
-              "alergens": ["Dairy"]
-          },
-          {
-              "id": 4,
-              "name": "Ricotta",
-              "alergens": ["Dairy"]
-          }
-      ]
-  },
-  // Nueva drinks
-  {
+        { "id": 1, "name": "Mozzarella", "alergens": ["Dairy"] },
+        { "id": 2, "name": "Gorgonzola", "alergens": ["Dairy"] },
+        { "id": 3, "name": "Parmesano", "alergens": ["Dairy"] },
+        { "id": 4, "name": "Ricotta", "alergens": ["Dairy"] }
+      ],
+      "type": "pizza",
+      "meat": null
+    },
+    {
       "id": 7,
       "name": "Fanta Orange",
       "price": 2.00,
-      "type": "drinks",
       "size": "MEDIUM",
-      "meat": null,
-      "ingredients": [] // No tiene ingredients
-  },
-  // Nuevo plato de pasta
-  {
+      "ingredients": [],
+      "type": "drinks",
+      "meat": null
+    },
+    {
       "id": 8,
       "name": "Pasta Alfredo",
       "price": 8.00,
       "size": null,
-      "meat": null,
       "ingredients": [
-          {
-              "id": 9,
-              "name": "Noodles",
-              "alergens": ["Gluten"]
-          },
-          {
-              "id": 10,
-              "name": "Salsa Alfredo",
-              "alergens": ["Dairy"]
-          },
-          {
-              "id": 11,
-              "name": "Parsley",
-              "alergens": []
-          }
-      ]
-  },
-// Nuevos platos de kebab
-  {
-    "id": 13,
-    "name": "Classic Kebab",
-    "price": 7.99,
-    "size": null,
-    "ingredients": [
-      { "id": 1, "name": "Tomato", "alergens": [] },
-      { "id": 2, "name": "Lettuce", "alergens": [] },
-      { "id": 3, "name": "Onions", "alergens": [] },
-      { "id": 4, "name": "Cucumber", "alergens": [] }
-    ],
-    "type": "KEBAB",
-    "meat": null
-  },
-  {
-    "id": 14,
-    "name": "BBQ Kebab",
-    "price": 8.49,
-    "size": null,
-    "ingredients": [
-      { "id": 1, "name": "Tomato", "alergens": [] },
-      { "id": 2, "name": "Lettuce", "alergens": [] },
-      { "id": 3, "name": "Onions", "alergens": [] },
-      { "id": 5, "name": "Peppers", "alergens": [] },
-      { "id": 6, "name": "BBQ Sauce", "alergens": [] }
-    ],
-    "type": "KEBAB",
-    "meat": null
-  },
-  {
-    "id": 15,
-    "name": "Spicy Kebab",
-    "price": 9.99,
-    "size": null,
-    "ingredients": [
-      { "id": 1, "name": "Tomato", "alergens": [] },
-      { "id": 2, "name": "Lettuce", "alergens": [] },
-      { "id": 3, "name": "Onions", "alergens": [] },
-      { "id": 4, "name": "Cucumber", "alergens": [] },
-      { "id": 16, "name": "Spicy Sauce", "alergens": ["None"] }
-    ],
-    "type": "KEBAB",
-    "meat": null
-  },
-  {
-    "id": 16,
-    "name": "Falafel Kebab",
-    "price": 8.99,
-    "size": null,
-    "ingredients": [
-      { "id": 1, "name": "Tomato", "alergens": [] },
-      { "id": 2, "name": "Lettuce", "alergens": [] },
-      { "id": 5, "name": "Peppers", "alergens": [] }
-    ],
-    "type": "KEBAB",
-    "meat": null
-  }
-];
+        { "id": 9, "name": "Noodles", "alergens": ["Gluten"] },
+        { "id": 10, "name": "Salsa Alfredo", "alergens": ["Dairy"] },
+        { "id": 11, "name": "Parsley", "alergens": [] }
+      ],
+      "type": "pasta",
+      "meat": null
+    },
+    {
+      "id": 13,
+      "name": "Classic Kebab",
+      "price": 7.99,
+      "size": null,
+      "ingredients": [
+        { "id": 1, "name": "Tomato", "alergens": [] },
+        { "id": 2, "name": "Lettuce", "alergens": [] },
+        { "id": 3, "name": "Onions", "alergens": [] },
+        { "id": 4, "name": "Cucumber", "alergens": [] }
+      ],
+      "type": "KEBAB",
+      "meat": null
+    },
+    {
+      "id": 14,
+      "name": "BBQ Kebab",
+      "price": 8.49,
+      "size": null,
+      "ingredients": [
+        { "id": 1, "name": "Tomato", "alergens": [] },
+        { "id": 2, "name": "Lettuce", "alergens": [] },
+        { "id": 3, "name": "Onions", "alergens": [] },
+        { "id": 5, "name": "Peppers", "alergens": [] },
+        { "id": 6, "name": "BBQ Sauce", "alergens": [] }
+      ],
+      "type": "KEBAB",
+      "meat": null
+    },
+    {
+      "id": 15,
+      "name": "Spicy Kebab",
+      "price": 9.99,
+      "size": null,
+      "ingredients": [
+        { "id": 1, "name": "Tomato", "alergens": [] },
+        { "id": 2, "name": "Lettuce", "alergens": [] },
+        { "id": 3, "name": "Onions", "alergens": [] },
+        { "id": 4, "name": "Cucumber", "alergens": [] },
+        { "id": 16, "name": "Spicy Sauce", "alergens": ["None"] }
+      ],
+      "type": "KEBAB",
+      "meat": null
+    },
+    {
+      "id": 16,
+      "name": "Falafel Kebab",
+      "price": 8.99,
+      "size": null,
+      "ingredients": [
+        { "id": 1, "name": "Tomato", "alergens": [] },
+        { "id": 2, "name": "Lettuce", "alergens": [] },
+        { "id": 5, "name": "Peppers", "alergens": [] }
+      ],
+      "type": "KEBAB",
+      "meat": null
+    }
+  ];
 
 // Ruta para obtener productos
 app.get('/products', (req, res) => {
